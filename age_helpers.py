@@ -2,8 +2,7 @@ import datetime
 
 def get_winery_age():
     today = datetime.datetime.now()
-    foundation_year = datetime.datetime(year=1920, month=1, day=1)
-    return str((today - foundation_year).days // 365)
+    return str((today.year - 1920))
     
   
 def get_winery_age_form(age: str):
