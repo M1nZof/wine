@@ -28,10 +28,10 @@ if __name__ == '__main__':
 
     excel_wine = pandas.read_excel(os.path.join(args.path, args.name), na_values=None, keep_default_na=False).to_dict(orient='records')
 
-    sorted_excel_wine = defaultdict(list)
+    sorted_excel_wines = defaultdict(list)
 
     for product in excel_wine:
-        sorted_excel_wine[product['Категория']].append(product)
+        sorted_excel_wines[product['Категория']].append(product)
 
     winery_age = get_winery_age()
     winery_age_form = get_winery_age_form(winery_age)
@@ -39,7 +39,7 @@ if __name__ == '__main__':
     rendered_page = template.render(
         winery_age=winery_age,
         winery_age_form=winery_age_form,
-        drinks=sorted_excel_wine
+        drinks=sorted_excel_wines
     )
 
     with open('index.html', 'w', encoding="utf8") as file:
