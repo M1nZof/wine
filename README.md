@@ -4,7 +4,7 @@
 
 ## Для установки библиотек
 
-```p
+```
 pip install requirements.txt
 ```
 
@@ -12,7 +12,7 @@ pip install requirements.txt
 
 Запустите сайт командой:
 
-```p
+```
 python main.py
 ```
 
@@ -20,7 +20,7 @@ python main.py
 
 Пример с файлом, находящимся в директории на уровень выше и имеющий название `wine3.xlsx`:
 
-```p
+```
 python main.py -p .. -n wine3.xlsx
 ```
 
