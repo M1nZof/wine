@@ -16,13 +16,3 @@ def get_winery_age_form(age: str):
     else:
         return 'лет'
         
-        
-    if str(age).endswith(tuple([str(a) for a in range(11, 15)])):
-        print(f'{i} лет')
-    elif str(age).endswith('1'):
-        print(f'{i} год')
-    elif str(age).endswith(tuple('234')):
-        print(f'{i} года')
-    else:
-        print(f'{i} лет')
-        
